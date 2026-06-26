@@ -14,5 +14,10 @@ services:
       context: .
       dockerfile: Dockerfile.api
     container_name: wpp_bot_api
+    env_file:
+      - .env
     ports:
       - '5000:5000'
+    volumes:
+      - .:/app
+    command: gunicorn --reload -w 4 -b 0.0.0.0:5000 app:app
