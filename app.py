@@ -7,6 +7,8 @@ from services.waha import Waha
 
 app = Flask(__name__)
 
+def cmd_iso():
+    return ""
 
 @app.route('/chatbot/webhook/', methods=['POST'])
 def webhook():

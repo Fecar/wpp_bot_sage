@@ -1,35 +1,31 @@
 # ========================
+# Git e Docker
+# ========================
+.git/
+.gitignore
+.dockerignore
+Dockerfile.api
+docker-compose.yml
+
+# ========================
 # Variáveis de Ambiente
 # ========================
+# O .env não deve ir para a imagem, o docker-compose injeta ele em tempo de execução
 .env
 .env.*
-!.env.example
 
 # ========================
 # Python
 # ========================
-# Arquivos compilados
 __pycache__/
 *.py[cod]
 *$py.class
-
-# Ambientes Virtuais (caso teste localmente antes do Docker)
 venv/
 .venv/
-env/
-ENV/
 
 # ========================
-# Editores (Neovim / Vim / VSCode)
+# Editores e OS
 # ========================
 *.swp
 *.swo
-*~
-.vscode/
-.idea/
-
-# ========================
-# Sistema Operacional
-# ========================
 .DS_Store
-Thumbs.db
